@@ -11,4 +11,7 @@ class PublicController {
     public function about(){
         view('about');
     }
+    public function test(){
+        var_dump($_GET);
+    }
 }
