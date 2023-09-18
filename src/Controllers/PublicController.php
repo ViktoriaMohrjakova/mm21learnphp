@@ -1,12 +1,30 @@
 <?php
 
-Namespace App\Controllers;
+namespace App\Controllers;
 
-class PublicController{
+use App\DB;
+use App\Models\User;
+
+class PublicController {
     public function home(){
-        echo 'Home Page';
+$result = User::all();
+var_dump($result);
+
+
+
+die();
+        $name = 'Tori';
+        $num = 10;
+        view('home', compact('name', 'num'));
     }
     public function about(){
-        echo 'About';
+        view('about');
+    }
+    public function test(){
+        var_dump($_POST);
+        view('form');
+    }
+    public function testAnswer(){
+        var_dump($_POST); 
     }
 }
