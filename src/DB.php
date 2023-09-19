@@ -28,4 +28,14 @@ class DB {
         $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
         return $stmt->fetchAll();
     }
+
+    public function insert($table, $fields){
+        unset($fields['id']);
+        $fieldNameText = implode(', ', array_keys($fields));
+        $fieldValuesText = implode("', '", $fields);
+        $sql = "INSERT INTO $table ($fieldNameText)
+        VALUES ('$fieldValuesText')";
+        // use exec() because no results are returned
+        $this->conn->exec($sql);
+    }
 }
