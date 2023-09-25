@@ -19,5 +19,12 @@ class ArticlesController {
         $article->title = $_POST['title'];
         $article->body = $_POST['body'];
         $article->save();
+        header('Location: /admin/articles');
+    }
+
+    public function show(){
+        $id = $_GET['id'];
+        $article = Article::find($id);
+        var_dump($article);
     }
 }

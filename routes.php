@@ -12,3 +12,4 @@ Router::post('/test', [PublicController::class, 'testAnswer']);
 Router::get('/admin/articles', [ArticlesController::class, 'index']);
 Router::get('/admin/articles/new', [ArticlesController::class, 'create']);
 Router::post('/admin/articles', [ArticlesController::class, 'store']);
+Router::get('/admin/articles/view', [ArticlesController::class, 'show']);
