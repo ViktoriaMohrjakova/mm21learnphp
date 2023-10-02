@@ -2,6 +2,7 @@
 session_start();
 
 require __DIR__ .'/../vendor/autoload.php';
+
 use App\Router;
 require __DIR__ . '/../routes.php';
 require __DIR__ . '/../helpers.php';
