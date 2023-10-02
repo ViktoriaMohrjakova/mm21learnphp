@@ -16,9 +16,9 @@
                     <td><?=$article->title?></td>
                     <td>
                         <div class="buttons has-addons">
-                            <a class="button is-info">View</a>
-                            <a class="button is-warning">Edit</a>
-                            <a class="button is-danger">Delete</a>
+                            <a class="button is-info" href="/admin/articles/view?id=<?=$article->id?>">View</a>
+                            <a class="button is-warning"href="/admin/articles/edit?id=<?=$article->id?>">Edit</a>
+                            <a class="button is-danger" href="/admin/articles/delete?id=<?=$article->id?>">Delete</a>
                         </div>
                     </td>
 
