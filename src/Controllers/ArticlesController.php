@@ -15,9 +15,12 @@ class ArticlesController {
     }
 
     public function store(){
+        $filename = md5($_FILES['image']['name'].microtime()). '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+        move_uploaded_file($_FILES['image']['tmp_name'], 'public/' . $filename);
         $article = new Article();
         $article->title = $_POST['title'];
         $article->body = $_POST['body'];
+        $article->image = 'public/' . $filename;
         $article->save();
         header('Location: /admin/articles');
     }

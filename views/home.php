@@ -9,6 +9,13 @@
                             <?=$article->title?>
                         </p>
                     </header>
+                    <?php if($article->image): ?>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="/<?=$article->image?>" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <?php endif ?>
                     <div class="card-content">
                         <div class="content">
                             <?=$article->body?>
