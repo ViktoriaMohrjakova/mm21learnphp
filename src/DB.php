@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Models\Article;
+use App\Models\User;
 use \PDO;
 use \PDOException;
 
@@ -79,4 +80,5 @@ class DB {
         // use exec() because no results are returned
         $this->conn->exec($sql);
     }
+    
 }

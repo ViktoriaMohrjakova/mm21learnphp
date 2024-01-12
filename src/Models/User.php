@@ -6,6 +6,9 @@ class User extends Model{
     public $id;
     public $email;
     public $password;
+    public $name;
+
+    
 
     public static function auth(){
         if(isset($_SESSION['user'])){
